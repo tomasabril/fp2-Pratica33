@@ -16,8 +16,18 @@ public class ExemploMatriz {
         m[1][1] = 1.1;
         m[2][0] = 2.0;
         m[2][1] = 2.1;
+        Matriz outra = new Matriz(3, 2);
+        double[][] m2 = outra.getMatriz();
+        m2[0][0] = 0.0;
+        m2[0][1] = 0.1;
+        m2[1][0] = 1.0;
+        m2[1][1] = 1.1;
+        m2[2][0] = 2.0;
+        m2[2][1] = 2.1;
+        
         Matriz transp = orig.getTransposta();
-        System.out.println("Matriz original: " + orig);
-        System.out.println("Matriz transposta: " + transp);
+        Matriz somada = orig.soma(outra);
+        System.out.println("Matriz original: \n" + orig);
+        System.out.println("Matriz transposta: \n" + transp);
     }
 }

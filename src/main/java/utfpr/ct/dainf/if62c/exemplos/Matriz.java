@@ -9,6 +9,7 @@ package utfpr.ct.dainf.if62c.exemplos;
 /**
  * Representa uma matriz de valores double.
  * @author Wilson Horstmeyer Bogadao <wilson@utfpr.edu.br>
+ * Tomas Abril
  */
 public class Matriz {
     
@@ -77,9 +78,9 @@ public class Matriz {
         for (double[] linha: mat) {
             s.append("[ ");
             for (double x: linha) {
-                s.append(x).append(" ");
+                s.append(x).append(" | ");
             }
-            s.append("]");
+            s.append("]\n");
         }
         return s.toString();
     }
