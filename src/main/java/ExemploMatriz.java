@@ -2,8 +2,7 @@ import utfpr.ct.dainf.if62c.exemplos.Matriz;
 
 /**
  * IF62C Fundamentos de Programação 2
- * Exemplo de programação em Java.
- * @author Wilson Horstmeyer Bogado <wilson@utfpr.edu.br>
+ * Tomás Abril -2014
  */
 public class ExemploMatriz {
 
