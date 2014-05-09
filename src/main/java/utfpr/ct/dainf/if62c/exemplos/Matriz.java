@@ -8,7 +8,7 @@ package utfpr.ct.dainf.if62c.exemplos;
 
 /**
  * Representa uma matriz de valores double.
- * @author Wilson Horstmeyer Bogadao <wilson@utfpr.edu.br>
+ * Wilson Horstmeyer Bogadao <wilson@utfpr.edu.br>
  * Tomas Abril
  */
 public class Matriz {
@@ -52,8 +52,17 @@ public class Matriz {
      * @param mat A matriz a ser somada
      * @return A soma das matrizes
      */
-    public Matriz soma(Matriz mat) {
-        throw new UnsupportedOperationException("Soma de matrizes não implementada.");
+    public Matriz soma(Matriz matB) {
+        //throw new UnsupportedOperationException("Soma de matrizes não implementada.");
+	Matriz s = new Matriz(mat.length, mat[0].length);
+	double[][] sm = s.getMatriz();
+	for( int i=0; i < mat.length; i++) {
+		for( int j=0; j < mat[0].length; j++) {
+			sm[i][j] = mat[i][j] + matB.getMatriz()[i][j];
+		}
+	}
+	    
+	return s;
     }
 
     /**
@@ -61,8 +70,18 @@ public class Matriz {
      * @param mat A matriz a ser multiplicada
      * @return O produto das matrizes
      */
-    public Matriz prod(Matriz mat) {
-        throw new UnsupportedOperationException("Produto de matrizes não implementado.");
+    public Matriz prod(Matriz mat2) {
+        //throw new UnsupportedOperationException("Produto de matrizes não implementado.");
+	Matriz p = new Matriz(mat.length, mat2.getMatriz()[0].length);
+	for(int i=0; i<mat2.getMatriz()[0].length; i++) {
+		for(int j=0; j<mat.length; j++) {
+			for(int k=0; k<mat[0].length; k++) {
+				p.getMatriz()[i][j] += mat[i][k] * mat2.getMatriz()[k][j];
+			}
+		}
+	}
+	    
+	return p;
     }
 
     /**
